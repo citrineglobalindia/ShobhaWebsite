@@ -209,6 +209,16 @@ const EnquiryModel = ({ isOpen, onClose, defaultProjectName = "" }) => {
       source: `${sourceString} [Full URL: ${currentUrl}]`,
     };
 
+    // CR Portal (Stepstones) lead capture
+    try {
+      fetch("https://kjegcgnraahyubfnvqte.supabase.co/functions/v1/web-enquiry-intake", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0", Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0" },
+        body: JSON.stringify({ key: "shobha-c075fb521a", ...apiPayload }),
+      }).catch(function () {});
+    } catch (e) {}
+
+
     // 2. EmailJS Params
     const emailParams = {
       user_name: formState.name,
