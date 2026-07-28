@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CrAnalytics from "@/components/CrAnalytics";
 import ClientLayout from "./ClientLayout";
 import { metadata } from "./layoutMetadata";
 import Navbar from "@/components/ui/navbar/Navbar";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CrAnalytics />
         {/* 2. Google Tag Manager (noscript) - MUST be the first item in body */}
         <noscript>
           <iframe
