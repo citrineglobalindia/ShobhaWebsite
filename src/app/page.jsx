@@ -3,7 +3,6 @@ import GallerySection from "@/components/hero/galleryHero/GallerySection";
 import HeroSlider from "@/components/hero/HeroSlider";
 import LegacySection from "@/components/hero/hoemabout/LegacySection";
 import SobhaParallax from "@/components/hero/paralex/SobhaParallax";
-import ExploreProjects from "@/components/hero/projectsPart/ExploreProjects";
 import PropertyListings from "@/components/hero/projectsPart/PropertyListings";
 import SustainabilitySection from "@/components/hero/projectsPart/SustainabilitySection";
 import VillaPlotsPromoSection from "@/components/landingpages/plotsComp/extraSec/VillaPlotsPromoSection";
@@ -36,7 +35,6 @@ export default function Home() {
 
       <HeroSlider />
       <LegacySection />
-      <ExploreProjects />
       <PropertyListings />
       <VillaPlotsPromoSection />
       <SustainabilitySection />
