@@ -27,7 +27,7 @@ const AMENITY_DATA = [
     icon: Trees,
     title: "6-Acre Urban Forest",
     desc: "Escape the city chaos in our Miyawaki-themed urban forest, featuring meditation pods, reflexology paths, and a dedicated bird-watching deck.",
-    src: "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769456609/main_2_spvqng.jpg",
+    src: "/one-world/zen-courtyard.jpg",
     features: ["Miyawaki Forest", "Butterfly Park", "Reflexology Path"],
   },
   {
@@ -36,7 +36,7 @@ const AMENITY_DATA = [
     icon: Droplets,
     title: "The Aqua Zone",
     desc: "A sprawling 50m Olympic-length lap pool coupled with a therapeutic jacuzzi and a dedicated kids' splash arena.",
-    src: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2670&auto=format&fit=crop",
+    src: "/one-world/tranquillity-falls.jpg",
     features: ["Olympic Lap Pool", "Jacuzzi Spa", "Kids Splash Pad"],
   },
   {
@@ -54,7 +54,7 @@ const AMENITY_DATA = [
     icon: Users,
     title: "Club Royale",
     desc: "A 40,000 sq.ft. clubhouse featuring a grand ballroom, co-working spaces, and a rooftop lounge for community gatherings.",
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop",
+    src: "/one-world/night-elevation.jpg",
     features: ["Grand Ballroom", "Co-Working Space", "Rooftop Cafe"],
   },
   {

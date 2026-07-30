@@ -10,9 +10,9 @@ const OVERVIEW_ITEMS = [
   {
     id: 1,
     type: "image",
-    src: "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/hoskote_cxdrzp.jpg", // Your Hoskote Image
+    src: "/one-world/night-elevation.jpg", // Sobha One World night elevation
     title: "The Township",
-    subtitle: "25 Acres of Paradise",
+    subtitle: "48 Acres of Paradise",
     size: "large", // Spans 2x2
   },
   {
@@ -27,8 +27,8 @@ const OVERVIEW_ITEMS = [
   {
     id: 3,
     type: "image",
-    // Generic Luxury Nature Shot for "Eco-Living" vibe
-    src: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=2590&auto=format&fit=crop",
+    // Sobha One World Zen courtyard
+    src: "/one-world/zen-courtyard.jpg",
     title: "Eco-Luxe Living",
     subtitle: "Nature at your doorstep",
     size: "tall", // Spans 1x2 (Vertical)
@@ -45,8 +45,8 @@ const OVERVIEW_ITEMS = [
   {
     id: 5,
     type: "image",
-    // Generic Luxury Club/Pool Shot
-    src: "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769446862/shoba-req_srrmbh.jpg",
+    // Sobha One World Tranquillity Falls
+    src: "/one-world/tranquillity-falls.jpg",
     title: "World-Class Club",
     subtitle: "40,000 Sq.ft of Leisure",
     size: "wide", // Spans 2x1

@@ -56,8 +56,7 @@ const PROPERTIES = [
     price: "Price On Request",
     apartments: "2, 3 & 4 BHK",
     unitSize: "1500 Sq.Ft. Onwards*",
-    image:
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769446665/shoba-req_jqzzsd.jpg",
+    image: "/one-world/night-elevation.jpg",
     href: "/sobha-hoskote",
   },
   {

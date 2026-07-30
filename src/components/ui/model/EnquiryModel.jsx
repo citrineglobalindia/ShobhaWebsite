@@ -42,8 +42,7 @@ const PROJECT_DATA = [
     id: 2,
     title: "Sobha One World",
     slug: "/sobha-hoskote",
-    image:
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/hoskote_cxdrzp.jpg",
+    image: "/one-world/night-elevation.jpg",
     location: "Hoskote, East Bengaluru",
     basePrice: "Price not available yet",
     configs: [

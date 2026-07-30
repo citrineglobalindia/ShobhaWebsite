@@ -65,7 +65,7 @@ const SobhaHoskoteHero = () => {
           className="relative w-full h-full"
         >
           <Image
-            src="https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769445764/hoskote_zrd82e.jpg"
+            src="/one-world/night-elevation.jpg"
             alt="Sobha One World Luxury Landscape"
             fill
             className="object-cover object-center"
@@ -124,7 +124,7 @@ const SobhaHoskoteHero = () => {
             className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12 border-l-2 border-[#C5A059] pl-5 md:pl-8"
           >
             <p className="text-gray-300 font-light text-sm sm:text-base md:text-lg max-w-md leading-relaxed">
-              A 25-acre integrated township designed for the elite. Experience
+              A 48-acre integrated township designed for the elite. Experience
               the perfect blend of nature and urban luxury.
             </p>
             <div>

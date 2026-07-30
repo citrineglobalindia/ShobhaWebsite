@@ -149,7 +149,7 @@ const ProjectOverviewSection = () => {
               className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mb-10 max-w-3xl"
             >
               {[
-                { icon: Maximize, title: "45 Acres", desc: "Land Parcel" },
+                { icon: Maximize, title: "48 Acres", desc: "Land Parcel" },
                 { icon: Home, title: "4,182", desc: "Premium Units" },
                 { icon: Building2, title: "08 Towers", desc: "Landmarks" },
                 { icon: Layers, title: "G + 54", desc: "Floors / Tower" },

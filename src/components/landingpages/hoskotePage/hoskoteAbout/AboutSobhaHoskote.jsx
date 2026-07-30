@@ -67,7 +67,7 @@ const AboutSobhaHoskote = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-gray-400 text-lg leading-relaxed text-justify"
             >
-              Sobha One World is a landmark 25-acre township designed for those
+              Sobha One World is a landmark 48-acre township designed for those
               who refuse to compromise. Positioned at the nexus of the{" "}
               <span className="text-white font-medium">
                 Satellite Town Ring Road (STRR)
@@ -82,7 +82,7 @@ const AboutSobhaHoskote = () => {
               {[
                 "Luxury 3 & 4 BHK",
                 "Neo-Bangalore Hub",
-                "25-Acre Township",
+                "48-Acre Township",
               ].map((tag, i) => (
                 <span
                   key={i}
@@ -140,7 +140,7 @@ const AboutSobhaHoskote = () => {
             {/* Main Image Layer */}
             <div className="absolute inset-0 z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
               <Image
-                src="https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769445764/hoskote_zrd82e.jpg"
+                src="/one-world/night-elevation.jpg"
                 alt="Sobha One World Perspective"
                 fill
                 className="object-cover transition-transform duration-[2s] scale-110 group-hover:scale-100"
@@ -183,7 +183,7 @@ const AboutSobhaHoskote = () => {
           {/* Mobile Image Fallback (Simple Layout) */}
           <div className="lg:hidden relative h-[400px] rounded-xl overflow-hidden mt-8 border border-white/10">
             <Image
-              src="https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769445764/hoskote_zrd82e.jpg"
+              src="/one-world/night-elevation.jpg"
               alt="Sobha One World"
               fill
               className="object-cover"
