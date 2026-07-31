@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 const BREVO_API_URL = "https://api.brevo.com/v3/smtp/email";
 const TO_EMAIL = process.env.ENQUIRY_TO_EMAIL || "waytonest01@gmail.com";
 // Sender must be a verified sender / authenticated domain in Brevo.
-const FROM_EMAIL = process.env.ENQUIRY_FROM_EMAIL || "enquiry@brigadesgranada.co.in";
+const FROM_EMAIL = process.env.ENQUIRY_FROM_EMAIL || "enquiry@sobha-specialoffers.com";
 const FROM_NAME = process.env.ENQUIRY_FROM_NAME || "Sobha Website Enquiry";
 const PROJECT_LABEL = process.env.ENQUIRY_PROJECT_LABEL || "Sobha";
 
