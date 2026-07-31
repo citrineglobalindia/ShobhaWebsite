@@ -132,14 +132,6 @@ const PlotsEnquirySection = () => {
       }).catch(function () {});
     } catch (e) {}
 
-    // CR Portal (Stepstones) lead capture
-    try {
-      fetch("https://kjegcgnraahyubfnvqte.supabase.co/functions/v1/web-enquiry-intake", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0", Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0" },
-        body: JSON.stringify({ key: "shobha-c075fb521a", ...apiPayload }),
-      }).catch(function () {});
-    } catch (e) {}
 
 
     // 2. EmailJS Params
@@ -156,11 +148,7 @@ const PlotsEnquirySection = () => {
     };
 
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_API;
-      const apiUrl = `${baseUrl}/v4/datacollect`;
 
-      const emailEndpointBase = process.env.NEXT_PUBLIC_EMAIL_ENDPOINT;
-      const customEmailApiUrl = `${emailEndpointBase}/v4/emailconnect`;
 
       // Promises with strategic silent catch handlers
       const leadRatPromise = fetch("/api/leadrat", {
@@ -169,27 +157,13 @@ const PlotsEnquirySection = () => {
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("LeadRat Silently Failed:", err));
 
-      const apiPromise = fetch(apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(apiPayload),
-      }).catch((e) => console.warn("API 1 connection closed seamlessly", e));
 
-      const customEmailApiPromise = fetch(customEmailApiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(apiPayload),
-      }).catch((e) => console.warn("API 2 connection closed seamlessly", e));
 
       // EmailJS notification removed (was sent from cdevng2@gmail.com).
       // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Process parallel network requests concurrently
-      await Promise.all([
-        leadRatPromise,
-        apiPromise,
-        customEmailApiPromise,
-      ]);
+      await Promise.all([leadRatPromise]);
 
       handleSuccess();
     } catch (error) {

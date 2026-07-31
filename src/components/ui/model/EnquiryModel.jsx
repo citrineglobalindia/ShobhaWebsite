@@ -217,14 +217,6 @@ const EnquiryModel = ({ isOpen, onClose, defaultProjectName = "" }) => {
       }).catch(function () {});
     } catch (e) {}
 
-    // CR Portal (Stepstones) lead capture
-    try {
-      fetch("https://kjegcgnraahyubfnvqte.supabase.co/functions/v1/web-enquiry-intake", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0", Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtqZWdjZ25yYWFoeXViZm52cXRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIzNzA1MzksImV4cCI6MjA5Nzk0NjUzOX0.EbuOY5ZW9Xyl6DbKUzwVxxwZqX012Pk2DP4gMp2WVc0" },
-        body: JSON.stringify({ key: "shobha-c075fb521a", ...apiPayload }),
-      }).catch(function () {});
-    } catch (e) {}
 
 
     // 2. EmailJS Params
@@ -242,11 +234,7 @@ const EnquiryModel = ({ isOpen, onClose, defaultProjectName = "" }) => {
 
     try {
       // Endpoints
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_API;
-      const apiUrl = `${baseUrl}/v4/datacollect`;
 
-      const emailEndpointBase = process.env.NEXT_PUBLIC_EMAIL_ENDPOINT;
-      const customEmailApiUrl = `${emailEndpointBase}/v4/emailconnect`;
 
       // Promises with silent catch blocks to prevent overall failure
       // LeadRat CRM (forwarded server-side so the API key stays private)
@@ -256,27 +244,13 @@ const EnquiryModel = ({ isOpen, onClose, defaultProjectName = "" }) => {
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("LeadRat Silently Failed:", err));
 
-      const apiPromise = fetch(apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(apiPayload),
-      }).catch((err) => console.warn("API 1 Silently Failed:", err));
 
-      const customEmailApiPromise = fetch(customEmailApiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(apiPayload),
-      }).catch((err) => console.warn("API 2 Silently Failed:", err));
 
       // EmailJS notification removed (was sent from cdevng2@gmail.com).
       // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Execute all 3 requests concurrently
-      await Promise.all([
-        leadRatPromise,
-        apiPromise,
-        customEmailApiPromise,
-      ]);
+      await Promise.all([leadRatPromise]);
 
       handleSuccessFlow();
     } catch (error) {
