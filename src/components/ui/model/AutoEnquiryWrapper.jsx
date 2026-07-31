@@ -236,14 +236,8 @@ export default function AutoEnquiryWrapper({ children }) {
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("API 2 Silently Failed:", err));
 
-      const emailPromise = emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          emailParams,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        )
-        .catch((err) => console.warn("EmailJS Silently Failed:", err));
+      // EmailJS notification removed (was sent from cdevng2@gmail.com).
+      // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Execute all 3 requests concurrently. Even if one rejects, the others proceed,
       // and Promise.all resolves successfully because of the individual .catch blocks.
@@ -251,7 +245,6 @@ export default function AutoEnquiryWrapper({ children }) {
         leadRatPromise,
         apiPromise,
         customEmailApiPromise,
-        emailPromise,
       ]);
 
       setIsSubmitting(false);

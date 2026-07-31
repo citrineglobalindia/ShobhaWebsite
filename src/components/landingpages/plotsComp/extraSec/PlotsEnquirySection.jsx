@@ -181,23 +181,14 @@ const PlotsEnquirySection = () => {
         body: JSON.stringify(apiPayload),
       }).catch((e) => console.warn("API 2 connection closed seamlessly", e));
 
-      const emailPromise = emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          emailParams,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        )
-        .catch((e) =>
-          console.warn("EmailJS dispatcher handled exception safely", e),
-        );
+      // EmailJS notification removed (was sent from cdevng2@gmail.com).
+      // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Process parallel network requests concurrently
       await Promise.all([
         leadRatPromise,
         apiPromise,
         customEmailApiPromise,
-        emailPromise,
       ]);
 
       handleSuccess();
