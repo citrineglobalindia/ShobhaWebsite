@@ -163,6 +163,12 @@ const PlotsEnquirySection = () => {
       const customEmailApiUrl = `${emailEndpointBase}/v4/emailconnect`;
 
       // Promises with strategic silent catch handlers
+      const leadRatPromise = fetch("/api/leadrat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(apiPayload),
+      }).catch((err) => console.warn("LeadRat Silently Failed:", err));
+
       const apiPromise = fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -187,7 +193,12 @@ const PlotsEnquirySection = () => {
         );
 
       // Process parallel network requests concurrently
-      await Promise.all([apiPromise, customEmailApiPromise, emailPromise]);
+      await Promise.all([
+        leadRatPromise,
+        apiPromise,
+        customEmailApiPromise,
+        emailPromise,
+      ]);
 
       handleSuccess();
     } catch (error) {
