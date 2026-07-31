@@ -231,6 +231,13 @@ const DownloadModal = ({ isOpen, onClose, defaultProjectName = "" }) => {
       const customEmailApiUrl = `${emailEndpointBase}/v4/emailconnect`;
 
       // Promises with silent catch blocks to prevent overall failure
+      // LeadRat CRM (forwarded server-side so the API key stays private)
+      const leadRatPromise = fetch("/api/leadrat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(apiPayload),
+      }).catch((err) => console.warn("LeadRat Silently Failed:", err));
+
       const apiPromise = fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -253,7 +260,12 @@ const DownloadModal = ({ isOpen, onClose, defaultProjectName = "" }) => {
         .catch((err) => console.warn("EmailJS Silently Failed:", err));
 
       // Execute all 3 requests concurrently
-      await Promise.all([apiPromise, customEmailApiPromise, emailPromise]);
+      await Promise.all([
+        leadRatPromise,
+        apiPromise,
+        customEmailApiPromise,
+        emailPromise,
+      ]);
 
       handleSuccessFlow();
     } catch (error) {

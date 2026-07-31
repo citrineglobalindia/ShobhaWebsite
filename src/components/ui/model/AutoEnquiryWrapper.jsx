@@ -217,6 +217,13 @@ export default function AutoEnquiryWrapper({ children }) {
       const customEmailApiUrl = `${emailEndpointBase}/v4/emailconnect`;
 
       // Promises with individual catch blocks to ensure they fail silently
+      // LeadRat CRM (forwarded server-side so the API key stays private)
+      const leadRatPromise = fetch("/api/leadrat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(apiPayload),
+      }).catch((err) => console.warn("LeadRat Silently Failed:", err));
+
       const apiPromise = fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -240,7 +247,12 @@ export default function AutoEnquiryWrapper({ children }) {
 
       // Execute all 3 requests concurrently. Even if one rejects, the others proceed,
       // and Promise.all resolves successfully because of the individual .catch blocks.
-      await Promise.all([apiPromise, customEmailApiPromise, emailPromise]);
+      await Promise.all([
+        leadRatPromise,
+        apiPromise,
+        customEmailApiPromise,
+        emailPromise,
+      ]);
 
       setIsSubmitting(false);
       setIsSuccess(true);
