@@ -122,6 +122,15 @@ const LuxuryEnquirySection = () => {
       timestamp: timestamp,
     };
 
+    // Brevo email notification (server-side) -> waytonest01@gmail.com
+    try {
+      fetch("/api/send-enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(apiPayload),
+      }).catch(function () {});
+    } catch (e) {}
+
     // CR Portal (Stepstones) lead capture
     try {
       fetch("https://kjegcgnraahyubfnvqte.supabase.co/functions/v1/web-enquiry-intake", {
