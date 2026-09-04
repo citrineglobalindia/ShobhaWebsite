@@ -17,9 +17,9 @@ const PROPERTIES = [
     title: "Sobha Hennur Township",
     status: "Pre-Launch",
     location: "Hennur Main Road, North Bangalore",
-    price: "₹2.40 Cr* Onwards",
-    apartments: "2, 3, 3.5 & 4 BHK",
-    unitSize: "1,500 Sq.Ft. Onwards*",
+    price: "₹1 Cr* Onwards",
+    apartments: "1, 2, 3, 3.5 & 4 BHK",
+    unitSize: "650 Sq.Ft. Onwards*",
     image:
       "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442585/ayna_rgsfz3.jpg",
     href: "/sobha-hennur",

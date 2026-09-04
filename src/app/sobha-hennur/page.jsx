@@ -8,9 +8,9 @@ import HennurLocation from "@/components/landingpages/hennurPage/HennurLocation"
 import React from "react";
 
 export const metadata = {
-  title: "Sobha Hennur Township | Premium 2, 3, 3.5 & 4 BHK on Hennur Main Road",
+  title: "Sobha Hennur Township | 1, 2, 3, 3.5 & 4 BHK on Hennur Main Road",
   description:
-    "Sobha Hennur Township — a landmark 50+ acre mixed-use township on Hennur Main Road, North Bangalore. 4,400+ residences across 12 wings, plus office, service apartments and a retail & food mall. Premium 2, 3, 3.5 & 4 BHK homes. Pre-launch enquiries now open.",
+    "Sobha Hennur Township — a landmark 50+ acre mixed-use township on Hennur Main Road, North Bangalore. 4,400+ residences across 12 wings, plus office, service apartments and a retail & food mall. Premium 1, 2, 3, 3.5 & 4 BHK homes starting at ₹1 Cr*. Pre-launch enquiries now open.",
 };
 
 const Hennur = () => {

@@ -17,7 +17,7 @@ const ABOUT_DATA = {
     { icon: Ruler, label: "Mixed-Use Township", value: "50+ Acres*" },
     { icon: Building2, label: "Total Development", value: "4,400+ Units*" },
     { icon: Trophy, label: "Residential Wings", value: "12 Towers*" },
-    { icon: Trees, label: "Configurations", value: "2/3/3.5/4 BHK" },
+    { icon: Trees, label: "Configurations", value: "1/2/3/3.5/4 BHK" },
   ],
   // Placeholder image — replace with the official Hennur render.
   image:

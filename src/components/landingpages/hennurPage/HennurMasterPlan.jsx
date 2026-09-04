@@ -28,7 +28,7 @@ const COMPONENTS = [
   {
     icon: Building2,
     title: "Residential Towers",
-    desc: "12 wings of premium 2, 3, 3.5 & 4 BHK homes rising 36 to 42 floors, with a maximum height of ~130m.",
+    desc: "12 wings of premium 1, 2, 3, 3.5 & 4 BHK homes rising 36 to 42 floors, with a maximum height of ~130m.",
   },
   {
     icon: Store,

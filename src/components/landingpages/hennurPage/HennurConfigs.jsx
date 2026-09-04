@@ -9,6 +9,11 @@ const PROJECT = "Sobha Hennur Township";
 
 const CONFIGS = [
   {
+    type: "1 BHK",
+    size: "Approx. 650–750 Sq.Ft.*",
+    note: "Compact, efficient city living",
+  },
+  {
     type: "2 BHK",
     size: "Approx. 1,500 Sq.Ft.*",
     note: "Smart, spacious family living",
@@ -47,14 +52,14 @@ const HennurConfigs = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             From practical family living to expansive premium residences, the
-            proposed mix of 2, 3, 3.5 and 4 BHK homes gives you the flexibility
+            proposed mix of 1, 2, 3, 3.5 and 4 BHK homes gives you the flexibility
             to select a configuration aligned with your lifestyle and space
             requirements.
           </p>
         </div>
 
         {/* Config cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {CONFIGS.map((c, idx) => (
             <motion.div
               key={c.type}
@@ -87,7 +92,7 @@ const HennurConfigs = () => {
           <div>
             <h3 className="text-2xl md:text-3xl font-bold text-white">
               Indicative pricing starts at{" "}
-              <span className="text-[#C5A059]">₹2.40 Cr*+</span>
+              <span className="text-[#C5A059]">₹1 Cr*+</span>
             </h3>
             <p className="text-gray-300 mt-1">
               Request the latest price sheet, floor plans and availability.

@@ -67,14 +67,14 @@ const SobhaHennurHero = () => {
           {/* Configuration & Price Block (Glass Card) */}
           <div className="bg-white/10 backdrop-blur-md border-l-4 border-yellow-500 p-5 md:p-6 rounded-r-lg max-w-lg shadow-2xl">
             <p className="text-gray-200 text-xs md:text-sm uppercase tracking-wide mb-1">
-              Premium 2, 3, 3.5 &amp; 4 BHK Residences
+              Premium 1, 2, 3, 3.5 &amp; 4 BHK Residences
             </p>
             <div className="flex flex-wrap items-baseline gap-2">
               <span className="text-xs md:text-sm text-gray-300">
                 Starting From
               </span>
               <span className="text-2xl md:text-4xl font-bold text-white">
-                ₹2.40 Cr*
+                ₹1 Cr*
               </span>
               <span className="text-xs md:text-sm text-gray-300">Onwards</span>
             </div>
