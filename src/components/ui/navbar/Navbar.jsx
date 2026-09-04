@@ -21,6 +21,13 @@ import DownloadModal from "../model/DownloadModal";
 // --- DATA FOR MOBILE SIDEBAR ---
 const FEATURED_LINKS = [
   {
+    name: "Sobha Hennur Township",
+    href: "/sobha-hennur",
+    image:
+      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442585/ayna_rgsfz3.jpg",
+    desc: "Hennur Main Road, North Bangalore",
+  },
+  {
     name: "Sobha Altair",
     href: "/sobha-altair",
     image:

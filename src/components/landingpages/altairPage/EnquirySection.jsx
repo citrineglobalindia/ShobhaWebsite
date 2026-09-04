@@ -26,6 +26,19 @@ import EnquiryModel from "@/components/ui/model/EnquiryModel";
 // --- DATA ---
 const PROJECT_DATA = [
   {
+    id: 100,
+    title: "Sobha Hennur Township",
+    slug: "/sobha-hennur",
+    location: "Hennur Main Road, North Bangalore",
+    basePrice: "Starts ₹2.40 Cr*+",
+    configs: [
+      { type: "2 BHK", size: "~1,500 Sqft" },
+      { type: "3 BHK", size: "~1,800–1,900 Sqft" },
+      { type: "3.5 BHK", size: "~2,100–2,230 Sqft" },
+      { type: "4 BHK", size: "Larger Premium Residences" },
+    ],
+  },
+  {
     id: 1,
     title: "Sobha Altair",
     slug: "/sobha-altair",

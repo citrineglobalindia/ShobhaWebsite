@@ -13,6 +13,18 @@ const FILTERS = ["All", "Pre-Launch", "Newly Launched", "Ongoing", "Sold Out"];
 // --- PROPERTY DATA (real Sobha projects) ---
 const PROPERTIES = [
   {
+    id: 100,
+    title: "Sobha Hennur Township",
+    status: "Pre-Launch",
+    location: "Hennur Main Road, North Bangalore",
+    price: "₹2.40 Cr* Onwards",
+    apartments: "2, 3, 3.5 & 4 BHK",
+    unitSize: "1,500 Sq.Ft. Onwards*",
+    image:
+      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442585/ayna_rgsfz3.jpg",
+    href: "/sobha-hennur",
+  },
+  {
     id: 1,
     title: "Sobha Ayana",
     status: "Newly Launched",
