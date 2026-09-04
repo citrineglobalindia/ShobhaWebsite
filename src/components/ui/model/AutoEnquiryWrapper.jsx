@@ -28,6 +28,7 @@ const PROJECT_DATA = [
     location: "Hennur Main Road, North Bangalore",
     basePrice: "Starts ₹1 Cr*+",
     configs: [
+      { type: "1 BHK", size: "~650–750 Sqft" },
       { type: "2 BHK", size: "~1,500 Sqft" },
       { type: "3 BHK", size: "~1,800–1,900 Sqft" },
       { type: "3.5 BHK", size: "~2,100–2,230 Sqft" },
