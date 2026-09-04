@@ -44,7 +44,7 @@ const SobhaHennurHero = () => {
             </span>
             <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-3 py-1 text-[10px] md:text-xs font-semibold uppercase tracking-wider rounded flex items-center gap-2">
               <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></span>
-              45-Acre Integrated Township
+              50+ Acre Mixed-Use Township
             </span>
           </div>
 

@@ -12,12 +12,12 @@ const ABOUT_DATA = {
   title: "Where Luxury Meets",
   subtitle: "Long-Term Value",
   description:
-    "Located on Hennur Main Road, Sobha Hennur is envisioned as a landmark 45-acre integrated township where premium homes, generous open spaces and a world-class lifestyle ecosystem come together. The large-scale master plan is designed for families who want the convenience of North Bangalore living without compromising on space, greenery and recreation.",
+    "Located on Hennur Main Road, Sobha Hennur is envisioned as a landmark 50+ acre mixed-use township that brings together premium residences, retail, office spaces, service apartments and world-class recreation within one integrated destination. Master-planned across 12 residential wings with over 4,400 homes, it is designed for families and professionals who want the convenience of North Bangalore living without compromising on space, greenery and lifestyle.",
   highlights: [
-    { icon: Ruler, label: "Integrated Township", value: "45 Acres*" },
-    { icon: Building2, label: "Configurations", value: "2/3/3.5/4 BHK" },
-    { icon: Trophy, label: "Grand Clubhouse", value: "~1.3 Lakh Sq.Ft.*" },
-    { icon: Trees, label: "Open & Green Spaces", value: "18+ Acres*" },
+    { icon: Ruler, label: "Mixed-Use Township", value: "50+ Acres*" },
+    { icon: Building2, label: "Total Development", value: "4,400+ Units*" },
+    { icon: Trophy, label: "Residential Wings", value: "12 Towers*" },
+    { icon: Trees, label: "Configurations", value: "2/3/3.5/4 BHK" },
   ],
   // Placeholder image — replace with the official Hennur render.
   image:
