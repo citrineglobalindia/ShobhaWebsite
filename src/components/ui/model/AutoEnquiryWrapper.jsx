@@ -141,7 +141,7 @@ export default function AutoEnquiryWrapper({ children }) {
     const hasOpened = sessionStorage.getItem("autoEnquiryFired");
 
     if (!hasOpened) {
-      // Set a timer for exactly 5 seconds (5000 milliseconds)
+      // Set a timer for exactly 1 second (1000 milliseconds)
       const timer = setTimeout(() => {
         const currentProject = PROJECT_DATA.find((p) => p.slug === pathname);
         if (currentProject) {
@@ -151,9 +151,9 @@ export default function AutoEnquiryWrapper({ children }) {
         setIsOpen(true);
         // Mark as fired so it doesn't open again during this session
         sessionStorage.setItem("autoEnquiryFired", "true");
-      }, 5000);
+      }, 1000);
 
-      // Cleanup timer if the component unmounts before 5 seconds
+      // Cleanup timer if the component unmounts before 1 second
       return () => clearTimeout(timer);
     }
   }, [pathname]);
