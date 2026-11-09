@@ -49,7 +49,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.your-real-estate-domain.com", // Replace with actual domain
   },
-  metadataBase: new URL("https://www.your-real-estate-domain.com"), // Replace with actual domain
+  metadataBase: new URL("https://www.sobha-specialoffers.com"),
   category: "Real Estate | Residential | Luxury Apartments | New Launch",
 
   // Icon configuration
