@@ -54,9 +54,12 @@ export const metadata = {
 
   // Icon configuration
   icons: {
-    icon: ["/shobalogo.png"],
-    apple: ["/shobalogo.png"],
-    shortcut: ["/shobalogo.png"],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/sobha-icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: ["/apple-icon.png"],
+    shortcut: ["/favicon.ico"],
   },
 
   // Author & Creator Information
