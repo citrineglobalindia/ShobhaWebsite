@@ -157,7 +157,7 @@ export default function AutoEnquiryWrapper({ children }) {
     const hasOpened = sessionStorage.getItem("autoEnquiryFired");
 
     if (!hasOpened) {
-      // Set a timer for exactly 1 second (1000 milliseconds)
+      // Open the lead popup immediately on page load
       const timer = setTimeout(() => {
         const currentProject = PROJECT_DATA.find((p) => p.slug === pathname);
         if (currentProject) {
@@ -167,9 +167,9 @@ export default function AutoEnquiryWrapper({ children }) {
         setIsOpen(true);
         // Mark as fired so it doesn't open again during this session
         sessionStorage.setItem("autoEnquiryFired", "true");
-      }, 1000);
+      }, 0);
 
-      // Cleanup timer if the component unmounts before 1 second
+      // Cleanup timer if the component unmounts before it fires
       return () => clearTimeout(timer);
     }
   }, [pathname]);
