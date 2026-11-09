@@ -14,7 +14,7 @@ import {
 import DownloadModal from "@/components/ui/model/DownloadModal";
 import EnquiryModel from "@/components/ui/model/EnquiryModel";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 // Indicative travel times — validate exact route/time before publishing.
 const LOCATION_DATA = [
@@ -173,7 +173,7 @@ const MullurLocation = () => {
                 Prime Address
               </h4>
               <p className="text-slate-800 text-lg font-medium leading-snug">
-                Sobha Mullur, <br />
+                Sobha Aurelia, <br />
                 Sarjapur Road, Opposite Wipro Office, <br />
                 Kodathi, Bengaluru.
               </p>

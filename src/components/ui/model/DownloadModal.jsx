@@ -24,19 +24,19 @@ import {
 const PROJECT_DATA = [
   {
     id: 101,
-    title: "Sobha Mullur",
-    slug: "/sobha-mullur",
+    title: "Sobha Aurelia",
+    slug: "/sobha-aurelia",
     image:
       "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
     location: "Sarjapur Road, Opposite Wipro, Kodathi, Bengaluru",
-    basePrice: "Starts ₹17,000/Sq.Ft*+",
+    basePrice: "Price on Request",
     configs: [
       { type: "1 BHK", size: "~750 Sqft" },
       { type: "2 BHK", size: "~1,100–1,200 Sqft" },
       { type: "3 BHK", size: "~1,550–1,800 Sqft" },
       { type: "4 BHK", size: "~2,100–2,400 Sqft" },
     ],
-    brochureLink: "/brochure/sobha-mullur.pdf",
+    brochureLink: "/brochure/sobha-aurelia.pdf",
   },
   {
     id: 100,

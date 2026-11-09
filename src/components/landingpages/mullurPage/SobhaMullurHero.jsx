@@ -5,7 +5,7 @@ import { MapPin, ArrowRight, Download } from "lucide-react";
 import EnquiryModel from "@/components/ui/model/EnquiryModel";
 import DownloadModal from "@/components/ui/model/DownloadModal";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 const SobhaMullurHero = () => {
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
@@ -28,7 +28,7 @@ const SobhaMullurHero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg"
-          alt="Sobha Mullur"
+          alt="Sobha Aurelia"
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/60 to-slate-900 lg:bg-gradient-to-r lg:from-slate-900 lg:via-slate-900/80 lg:to-transparent"></div>
@@ -54,7 +54,7 @@ const SobhaMullurHero = () => {
               By Sobha Limited
             </h2>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1]">
-              Sobha <span className="text-yellow-500">Mullur</span>
+              Sobha <span className="text-yellow-500">Aurelia</span>
             </h1>
           </div>
 
@@ -70,13 +70,9 @@ const SobhaMullurHero = () => {
               1, 2, 3 &amp; 4 BHK Residences
             </p>
             <div className="flex flex-wrap items-baseline gap-2">
-              <span className="text-xs md:text-sm text-gray-300">
-                Indicative
-              </span>
               <span className="text-2xl md:text-4xl font-bold text-white">
-                ₹17,000/Sq.Ft*
+                Price on Request
               </span>
-              <span className="text-xs md:text-sm text-gray-300">Onwards</span>
             </div>
             <p className="text-yellow-400 text-xs md:text-sm font-medium mt-2 flex items-center gap-1">
               <span>◆</span> EOI &amp; Priority Pre-Launch Registrations Open

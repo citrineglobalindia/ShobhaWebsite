@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import DownloadModal from "@/components/ui/model/DownloadModal";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 // Placeholder imagery — replace with the official Mullur amenity renders.
 const AMENITIES = [
@@ -94,7 +94,7 @@ const MullurAmenities = () => {
     <section className="py-20 bg-slate-950 font-sans relative overflow-hidden">
       <div className="absolute top-10 left-0 w-full text-center pointer-events-none opacity-[0.03]">
         <h2 className="text-[10rem] md:text-[12rem] font-black text-white leading-none tracking-tighter">
-          MULLUR
+          AURELIA
         </h2>
       </div>
 

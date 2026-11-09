@@ -11,7 +11,7 @@ const ThankYouContent = () => {
   // Default State (Fallback if accessed directly)
   // You can hardcode this per page, or leave generic
   const [data, setData] = useState({
-    projectName: "Sobha Mullur", // Defaulting to the specific page project
+    projectName: "Sobha Aurelia", // Defaulting to the specific page project
     fileLink: "",
     isBrochure: false,
     hasOpened: false,

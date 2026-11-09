@@ -24,6 +24,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/sobha-mullur",
+        destination: "/sobha-aurelia",
+        permanent: true,
+      },
+      {
+        source: "/sobha-mullur/thank-you",
+        destination: "/sobha-aurelia/thank-you",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

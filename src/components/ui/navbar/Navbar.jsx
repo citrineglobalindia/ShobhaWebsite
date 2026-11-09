@@ -21,8 +21,8 @@ import DownloadModal from "../model/DownloadModal";
 // --- DATA FOR MOBILE SIDEBAR ---
 const FEATURED_LINKS = [
   {
-    name: "Sobha Mullur",
-    href: "/sobha-mullur",
+    name: "Sobha Aurelia",
+    href: "/sobha-aurelia",
     image:
       "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
     desc: "Sarjapur Road, Opposite Wipro, Kodathi",

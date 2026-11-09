@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import { Building2, Layers, Home, Ruler, ArrowRight, Download } from "lucide-react";
 import DownloadModal from "@/components/ui/model/DownloadModal";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 const ABOUT_DATA = {
   title: "A New Address of",
   subtitle: "Excellence on Sarjapur Road",
   description:
-    "Sobha Mullur is an exciting upcoming residential development by Sobha Limited, strategically located on Sarjapur Road, opposite Wipro Office, Kodathi. Spread across 24 acres with 11 wings and around 2,200 homes, it brings together premium residences, thoughtfully designed spaces and an elevated lifestyle in one of Bengaluru's most prominent residential and IT corridors.",
+    "Sobha Aurelia is an exciting upcoming residential development by Sobha Limited, strategically located on Sarjapur Road, opposite Wipro Office, Kodathi. Spread across 24 acres with 11 wings and around 2,200 homes, it brings together premium residences, thoughtfully designed spaces and an elevated lifestyle in one of Bengaluru's most prominent residential and IT corridors.",
   highlights: [
     { icon: Ruler, label: "Residential Development", value: "24 Acres*" },
     { icon: Layers, label: "Towers", value: "11 Wings*" },
@@ -44,7 +44,7 @@ const AboutSobhaMullur = () => {
             >
               <Image
                 src={ABOUT_DATA.image}
-                alt="Sobha Mullur"
+                alt="Sobha Aurelia"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />

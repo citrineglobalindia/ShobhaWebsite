@@ -14,15 +14,15 @@ const FILTERS = ["All", "Pre-Launch", "Newly Launched", "Ongoing", "Sold Out"];
 const PROPERTIES = [
   {
     id: 101,
-    title: "Sobha Mullur",
+    title: "Sobha Aurelia",
     status: "Pre-Launch",
     location: "Sarjapur Road, Opposite Wipro, Kodathi",
-    price: "₹17,000/Sq.Ft* Onwards",
+    price: "Price on Request",
     apartments: "1, 2, 3 & 4 BHK",
     unitSize: "750 Sq.Ft. Onwards*",
     image:
       "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
-    href: "/sobha-mullur",
+    href: "/sobha-aurelia",
   },
   {
     id: 100,

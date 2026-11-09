@@ -12,13 +12,13 @@ import {
 } from "lucide-react";
 import EnquiryModel from "@/components/ui/model/EnquiryModel";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 const KEY_STATS = [
   { value: "24", label: "Acres of Development*" },
   { value: "11", label: "Residential Wings*" },
   { value: "2,200", label: "Homes / Units*" },
-  { value: "₹17K", label: "Per Sq.Ft. Indicative*" },
+  { value: "1–4", label: "BHK Configurations*" },
 ];
 
 const REASONS = [
@@ -60,7 +60,7 @@ const MullurHighlights = () => {
         {/* Header */}
         <div className="text-center mb-14 max-w-3xl mx-auto">
           <span className="text-[#C5A059] font-bold text-xs uppercase tracking-[0.25em] block mb-3">
-            Why Sobha Mullur
+            Why Sobha Aurelia
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Your Next Address of{" "}

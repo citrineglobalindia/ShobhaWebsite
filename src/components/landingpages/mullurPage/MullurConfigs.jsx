@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Home } from "lucide-react";
 import EnquiryModel from "@/components/ui/model/EnquiryModel";
 
-const PROJECT = "Sobha Mullur";
+const PROJECT = "Sobha Aurelia";
 
 const CONFIGS = [
   {
@@ -39,7 +39,7 @@ const MullurConfigs = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <span className="text-[#C5A059] font-bold text-xs uppercase tracking-[0.25em] block mb-3">
-            Homes at Mullur
+            Homes at Aurelia
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#0a1e38] mb-4">
             Choose the Space That{" "}
@@ -86,12 +86,12 @@ const MullurConfigs = () => {
         <div className="mt-12 bg-[#0a1e38] rounded-2xl px-8 py-8 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold text-white">
-              Indicative pricing at{" "}
-              <span className="text-[#C5A059]">₹17,000/Sq.Ft*</span>
+              Pricing &amp; Cost Sheet{" "}
+              <span className="text-[#C5A059]">on Request</span>
             </h3>
             <p className="text-gray-300 mt-1">
-              All-inclusive indicative pricing, subject to official
-              confirmation. Request the latest price sheet and floor plans.
+              Request the latest price sheet, floor plans and availability for
+              Sobha Aurelia.
             </p>
           </div>
           <button
