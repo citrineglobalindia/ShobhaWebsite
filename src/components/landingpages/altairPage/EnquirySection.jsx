@@ -26,6 +26,19 @@ import EnquiryModel from "@/components/ui/model/EnquiryModel";
 // --- DATA ---
 const PROJECT_DATA = [
   {
+    id: 101,
+    title: "Sobha Mullur",
+    slug: "/sobha-mullur",
+    location: "Sarjapur Road, Opposite Wipro, Kodathi, Bengaluru",
+    basePrice: "Starts ₹17,000/Sq.Ft*+",
+    configs: [
+      { type: "1 BHK", size: "~750 Sqft" },
+      { type: "2 BHK", size: "~1,100–1,200 Sqft" },
+      { type: "3 BHK", size: "~1,550–1,800 Sqft" },
+      { type: "4 BHK", size: "~2,100–2,400 Sqft" },
+    ],
+  },
+  {
     id: 100,
     title: "Sobha Hennur Township",
     slug: "/sobha-hennur",

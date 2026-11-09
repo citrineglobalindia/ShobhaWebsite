@@ -21,6 +21,13 @@ import DownloadModal from "../model/DownloadModal";
 // --- DATA FOR MOBILE SIDEBAR ---
 const FEATURED_LINKS = [
   {
+    name: "Sobha Mullur",
+    href: "/sobha-mullur",
+    image:
+      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+    desc: "Sarjapur Road, Opposite Wipro, Kodathi",
+  },
+  {
     name: "Sobha Hennur Township",
     href: "/sobha-hennur",
     image:

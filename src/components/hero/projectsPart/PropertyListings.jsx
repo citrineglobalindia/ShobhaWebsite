@@ -13,6 +13,18 @@ const FILTERS = ["All", "Pre-Launch", "Newly Launched", "Ongoing", "Sold Out"];
 // --- PROPERTY DATA (real Sobha projects) ---
 const PROPERTIES = [
   {
+    id: 101,
+    title: "Sobha Mullur",
+    status: "Pre-Launch",
+    location: "Sarjapur Road, Opposite Wipro, Kodathi",
+    price: "₹17,000/Sq.Ft* Onwards",
+    apartments: "1, 2, 3 & 4 BHK",
+    unitSize: "750 Sq.Ft. Onwards*",
+    image:
+      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+    href: "/sobha-mullur",
+  },
+  {
     id: 100,
     title: "Sobha Hennur Township",
     status: "Pre-Launch",
