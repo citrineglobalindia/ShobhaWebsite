@@ -21,7 +21,7 @@ const ABOUT_DATA = {
   ],
   // Placeholder image — replace with the official Mullur render.
   image:
-    "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+    "/aurelia/aurelia.jpg",
 };
 
 const AboutSobhaMullur = () => {

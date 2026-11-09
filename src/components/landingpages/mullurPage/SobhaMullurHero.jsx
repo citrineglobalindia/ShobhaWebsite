@@ -27,7 +27,7 @@ const SobhaMullurHero = () => {
       {/* --- 1. Background Image (placeholder — replace with official Mullur render) --- */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg"
+          src="/aurelia/aurelia.jpg"
           alt="Sobha Aurelia"
           className="w-full h-full object-cover opacity-60"
         />

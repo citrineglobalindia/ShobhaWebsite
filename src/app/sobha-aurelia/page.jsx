@@ -24,7 +24,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+        url: "https://www.sobha-specialoffers.com/aurelia/aurelia-og.jpg",
         width: 1200,
         height: 630,
         alt: "Sobha Aurelia — Sarjapur Road, Opposite Wipro, Kodathi, Bengaluru",
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Upcoming 24-acre community by Sobha Limited on Sarjapur Road, opposite Wipro, Kodathi. 1, 2, 3 & 4 BHK homes. EOI & pre-launch registrations open.",
     images: [
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+      "https://www.sobha-specialoffers.com/aurelia/aurelia-og.jpg",
     ],
   },
 };

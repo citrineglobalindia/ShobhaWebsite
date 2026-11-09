@@ -21,7 +21,7 @@ const PROPERTIES = [
     apartments: "1, 2, 3 & 4 BHK",
     unitSize: "750 Sq.Ft. Onwards*",
     image:
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+      "/aurelia/aurelia.jpg",
     href: "/sobha-aurelia",
   },
   {

@@ -27,7 +27,7 @@ const PROJECT_DATA = [
     title: "Sobha Aurelia",
     slug: "/sobha-aurelia",
     image:
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+      "/aurelia/aurelia.jpg",
     location: "Sarjapur Road, Opposite Wipro, Kodathi, Bengaluru",
     basePrice: "Price on Request",
     configs: [

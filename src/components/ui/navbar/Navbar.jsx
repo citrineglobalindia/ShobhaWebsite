@@ -24,7 +24,7 @@ const FEATURED_LINKS = [
     name: "Sobha Aurelia",
     href: "/sobha-aurelia",
     image:
-      "https://res.cloudinary.com/dkoljvhc9/image/upload/f_auto/v1769442581/alter_itsade.jpg",
+      "/aurelia/aurelia.jpg",
     desc: "Sarjapur Road, Opposite Wipro, Kodathi",
   },
   {
