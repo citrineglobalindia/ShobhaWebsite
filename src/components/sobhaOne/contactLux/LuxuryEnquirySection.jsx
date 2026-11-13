@@ -72,7 +72,7 @@ const LuxuryEnquirySection = () => {
       newErrors.email = "Invalid Email";
     }
 
-    if (!formState.phone.match(/^\d{10}$/)) newErrors.phone = "Invalid Number";
+    if (!formState.phone.match(/^[6-9]\d{9}$/)) newErrors.phone = "Invalid Number";
     if (!formState.config) newErrors.config = "Required";
     if (!formState.consent) newErrors.consent = "Required";
 
@@ -352,8 +352,17 @@ const LuxuryEnquirySection = () => {
                         name="phone"
                         placeholder="Mobile Number"
                         maxLength={10}
+                        inputMode="numeric"
+                        pattern="[6-9][0-9]{9}"
+                        title="Enter a 10-digit mobile number starting with 6-9"
                         value={formState.phone}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          e.target.value = e.target.value
+                            .replace(/\D/g, "")
+                            .replace(/^[0-5]+/, "")
+                            .slice(0, 10);
+                          handleChange(e);
+                        }}
                         className={`w-full bg-white border ${errors.phone ? "border-red-400" : "border-gray-200"} rounded-xl pl-12 py-4 text-sm focus:border-[#d4af37] focus:ring-4 focus:ring-[#d4af37]/5 outline-none transition-all`}
                       />
                     </div>

@@ -398,11 +398,19 @@ const HeroSlider = () => {
                         type="tel"
                         name="phone"
                         required
-                        pattern="[0-9]{10}"
-                        title="Please enter a valid 10-digit number"
+                        pattern="[6-9][0-9]{9}"
+                        maxLength={10}
+                        inputMode="numeric"
+                        title="Enter a 10-digit mobile number starting with 6-9"
                         placeholder="Phone Number"
                         value={formState.phone}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          e.target.value = e.target.value
+                            .replace(/\D/g, "")
+                            .replace(/^[0-5]+/, "")
+                            .slice(0, 10);
+                          handleChange(e);
+                        }}
                         className="w-full bg-black/40 border border-white/10 rounded-sm py-2 pl-10 pr-4 text-sm text-white placeholder-gray-400 outline-none focus:border-[#C5A059] focus:bg-black/60 transition-all"
                       />
                     </div>

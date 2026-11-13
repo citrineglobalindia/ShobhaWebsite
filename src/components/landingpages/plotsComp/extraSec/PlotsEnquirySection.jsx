@@ -79,7 +79,7 @@ const PlotsEnquirySection = () => {
       newErrors.email = "Valid email is required";
     }
 
-    if (!formState.phone.match(/^\d{10}$/))
+    if (!formState.phone.match(/^[6-9]\d{9}$/))
       newErrors.phone = "Enter valid 10-digit number";
     if (!formState.config) newErrors.config = "Please select a plot size";
     if (!formState.consent) newErrors.consent = "Please accept terms";
@@ -403,9 +403,18 @@ const PlotsEnquirySection = () => {
                         type="tel"
                         name="phone"
                         maxLength={10}
+                        inputMode="numeric"
+                        pattern="[6-9][0-9]{9}"
+                        title="Enter a 10-digit mobile number starting with 6-9"
                         placeholder="Phone Number"
                         value={formState.phone}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          e.target.value = e.target.value
+                            .replace(/\D/g, "")
+                            .replace(/^[0-5]+/, "")
+                            .slice(0, 10);
+                          handleChange(e);
+                        }}
                         className={`w-full bg-[#FAF9F6] border ${
                           errors.phone ? "border-red-400" : "border-gray-200"
                         } rounded-xl pl-20 pr-4 py-3.5 text-gray-900 placeholder-gray-400 focus:border-[#059669] focus:bg-white focus:ring-4 focus:ring-[#059669]/10 outline-none text-sm transition-all`}

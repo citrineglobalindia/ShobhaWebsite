@@ -408,9 +408,18 @@ export default function AutoEnquiryWrapper({ children }) {
                               type="tel"
                               name="phone"
                               required
-                              pattern="[0-9]{10}"
+                              pattern="[6-9][0-9]{9}"
+                              maxLength={10}
+                              inputMode="numeric"
+                              title="Enter a 10-digit mobile number starting with 6-9"
                               value={formState.phone}
-                              onChange={handleChange}
+                              onChange={(e) => {
+                                e.target.value = e.target.value
+                                  .replace(/\D/g, "")
+                                  .replace(/^[0-5]+/, "")
+                                  .slice(0, 10);
+                                handleChange(e);
+                              }}
                               placeholder="Phone Number*"
                               className="w-full bg-slate-50 border border-slate-200 rounded-lg pl-12 pr-4 py-3.5 text-sm md:text-base text-[#0a1e38] placeholder-slate-400 outline-none focus:border-[#C5A059] focus:ring-1 focus:ring-[#C5A059] transition-all"
                             />

@@ -185,7 +185,7 @@ const EnquirySection = ({ defaultProjectName = "" }) => {
       newErrors.email = "Valid email is required";
     }
 
-    if (!formState.phone.match(/^\d{10}$/))
+    if (!formState.phone.match(/^[6-9]\d{9}$/))
       newErrors.phone = "Enter valid 10-digit number";
     if (!formState.config) newErrors.config = "Please select a configuration";
     if (!formState.consent) newErrors.consent = "Please accept terms";
@@ -521,9 +521,18 @@ const EnquirySection = ({ defaultProjectName = "" }) => {
                         type="tel"
                         name="phone"
                         maxLength={10}
+                        inputMode="numeric"
+                        pattern="[6-9][0-9]{9}"
+                        title="Enter a 10-digit mobile number starting with 6-9"
                         placeholder="Phone Number"
                         value={formState.phone}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                          e.target.value = e.target.value
+                            .replace(/\D/g, "")
+                            .replace(/^[0-5]+/, "")
+                            .slice(0, 10);
+                          handleChange(e);
+                        }}
                         className={`w-full bg-black/40 border ${
                           errors.phone ? "border-red-500" : "border-white/10"
                         } rounded-lg pl-20 pr-4 py-3.5 text-white placeholder-gray-500 focus:border-[#C5A059] outline-none text-sm transition-colors`}
