@@ -211,6 +211,7 @@ export default function AutoEnquiryWrapper({ children }) {
     try {
       fetch("/api/send-enquiry", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch(function () {});
@@ -239,6 +240,7 @@ export default function AutoEnquiryWrapper({ children }) {
       // LeadRat CRM (forwarded server-side so the API key stays private)
       const leadRatPromise = fetch("/api/leadrat", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("LeadRat Silently Failed:", err));
@@ -250,7 +252,10 @@ export default function AutoEnquiryWrapper({ children }) {
 
       // Execute all 3 requests concurrently. Even if one rejects, the others proceed,
       // and Promise.all resolves successfully because of the individual .catch blocks.
-      await Promise.all([leadRatPromise]);
+      await Promise.race([
+        Promise.all([leadRatPromise]),
+        new Promise((resolve) => setTimeout(resolve, 3000)),
+      ]);
 
       setIsSubmitting(false);
       setIsSuccess(true);

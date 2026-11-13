@@ -223,6 +223,7 @@ const EnquirySection = ({ defaultProjectName = "" }) => {
     try {
       fetch("/api/send-enquiry", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch(function () {});
@@ -249,6 +250,7 @@ const EnquirySection = ({ defaultProjectName = "" }) => {
       // Promises with strategic silent catch handlers
       const leadRatPromise = fetch("/api/leadrat", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("LeadRat Silently Failed:", err));
@@ -259,7 +261,10 @@ const EnquirySection = ({ defaultProjectName = "" }) => {
       // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Execute all 3 requests concurrently
-      await Promise.all([leadRatPromise]);
+      await Promise.race([
+        Promise.all([leadRatPromise]),
+        new Promise((resolve) => setTimeout(resolve, 3000)),
+      ]);
 
       handleSuccess();
     } catch (error) {

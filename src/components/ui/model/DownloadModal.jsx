@@ -229,6 +229,7 @@ const DownloadModal = ({ isOpen, onClose, defaultProjectName = "" }) => {
     try {
       fetch("/api/send-enquiry", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch(function () {});
@@ -255,6 +256,7 @@ const DownloadModal = ({ isOpen, onClose, defaultProjectName = "" }) => {
       // LeadRat CRM (forwarded server-side so the API key stays private)
       const leadRatPromise = fetch("/api/leadrat", {
         method: "POST",
+        keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(apiPayload),
       }).catch((err) => console.warn("LeadRat Silently Failed:", err));
@@ -265,7 +267,10 @@ const DownloadModal = ({ isOpen, onClose, defaultProjectName = "" }) => {
       // Brevo (/api/send-enquiry) sends the notification from enquiry@sobha-specialoffers.com.
 
       // Execute all 3 requests concurrently
-      await Promise.all([leadRatPromise]);
+      await Promise.race([
+        Promise.all([leadRatPromise]),
+        new Promise((resolve) => setTimeout(resolve, 3000)),
+      ]);
 
       handleSuccessFlow();
     } catch (error) {
